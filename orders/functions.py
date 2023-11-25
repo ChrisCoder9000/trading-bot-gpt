@@ -1,12 +1,13 @@
+import sys
+
+sys.path.append("/Users/christiannonis/Documents/Projects/trading-bot-gpt")
+
 import datetime
 import os
-import sys
 
 import pandas as pd
 
 from utils import replacement_function
-
-sys.path.append("/Users/christiannonis/Documents/Projects/trading-bot-gpt")
 
 import json
 import openai

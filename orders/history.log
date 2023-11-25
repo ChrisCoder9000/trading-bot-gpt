@@ -46,3 +46,129 @@ type: long
 stop_loss: 26.1
 take_profit: 27.0
 explaination: I dati di mercato mostrano un trend rialzista con chiusura al di sopra del VWAP e volumi significativi. L'apertura di una posizione long potrebbe essere conveniente con uno stop loss a 26.10 e un take profit a 27.00.
+
+Order for JWN -- Time: 25/11/2023, 21:50:17
+type: long
+stop_loss: 14.1
+take_profit: 16.0
+explaination: L'azione di JWN sembra essere in una fase di ripresa dopo un periodo di ribasso. Il prezzo ha formato una candela rialzista dopo aver toccato il supporto a 14.21. Inoltre, il volume di scambio è aumentato, indicando un interesse crescente da parte degli investitori. Si consiglia di aprire una posizione long con uno stop loss a 14.10 e un take profit a 16.00.
+
+Order for V -- Time: 25/11/2023, 21:50:21
+type: long
+stop_loss: 248.6
+take_profit: 255.5
+explaination: Il prezzo delle azioni V ha recentemente formato un pattern di rialzo, con un aumento costante del prezzo. Le candele da 1H mostrano un trend rialzista e il volume delle transazioni è aumentato, confermando la forza del trend. Si consiglia di aprire una posizione long con un prezzo di apertura di 254.30, impostando uno stop loss a 248.60 per limitare le perdite in caso il prezzo dovesse invertire la direzione. Il take profit può essere impostato a 255.50 per cogliere i guadagni quando il prezzo raggiunge nuovi massimi.
+
+Order for A -- Time: 25/11/2023, 21:50:25
+type: long
+stop_loss: 123.8
+take_profit: 126.7
+explaination: La tendenza del titolo A è al rialzo, con un andamento crescente dei prezzi. Il volume delle transazioni è in aumento e i prezzi hanno superato la resistenza. Si consiglia un'apertura di posizione long con un stop loss a 123.80 e un take profit a 126.70.
+
+Order for AM -- Time: 25/11/2023, 21:50:30
+type: long
+stop_loss: 12.85
+take_profit: 13.4
+explaination: La tendenza al rialzo è supportata dal fatto che il prezzo è salito costantemente dal 20 novembre. Il volume delle negoziazioni è stato abbastanza elevato, confermando il movimento al rialzo. Si consiglia di aprire una posizione long con uno stop loss a 12.85 e un take profit a 13.40.
+
+Order for ANET -- Time: 25/11/2023, 21:50:33
+type: long
+stop_loss: 213.52
+take_profit: 221.41
+explaination: Dai dati di mercato, ANET mostra un trend rialzista con un aumento costante del prezzo di chiusura. Il volume di scambi è in aumento, il che conferma il rialzo. Si consiglia di aprire una posizione long con uno stop loss a 213.52 e un take profit a 221.41, in considerazione del supporto e della resistenza identificati dai dati storici.
+
+Order for STT -- Time: 25/11/2023, 21:50:39
+type: long
+stop_loss: 68.75
+take_profit: 71.5
+explaination: Secondo l'analisi tecnica, STT sembra essere in un'ottima posizione per un trade long. Il prezzo ha superato la resistenza chiave a 70.00 e potrebbe continuare a salire. Il livello di stop loss potrebbe essere posto a 68.75, appena sotto il recente supporto. Il take profit potrebbe essere posizionato a 71.50, dove c'è una potenziale resistenza significativa.
+
+Order for FNB -- Time: 25/11/2023, 21:50:42
+type: long
+stop_loss: 11.62
+take_profit: 11.95
+explaination: Dopo una leggera correzione, FNB ha formato un modello di inversione rialzista e sta mostrando segnali di ripresa. Il prezzo potrebbe salire verso il livello di resistenza a 11.95. Si consiglia di aprire una posizione long con uno stop loss a 11.62 e un take profit a 11.95.
+
+Order for AAPL -- Time: 25/11/2023, 21:57:22
+type: long
+stop_loss: 188.85
+take_profit: 193.5
+explaination: Dato che il prezzo di chiusura è superiore al prezzo di apertura e la media ponderata del volume (VWAP) è in aumento, potrebbe essere opportuno aprire una posizione long su AAPL. Un livello di stop loss ragionevole potrebbe essere posizionato a 188.85, mentre un take profit potenziale potrebbe essere fissato a 193.50.
+
+Order for AAPL -- Time: 25/11/2023, 21:58:18
+type: long
+stop_loss: 189
+take_profit: 193
+explaination: La situazione tecnica mostra un trend rialzista con l'apertura a 191.45 e un massimo di 192.93. Il volume di scambio è abbastanza alto, il che conferma l'interesse degli investitori. Si consiglia di aprire una posizione long con uno stop loss a 189 e un take profit a 193.
+
+Order for AAPL -- Time: 25/11/2023, 21:59:53
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Suggerisco di aprire una posizione long su AAPL. Il prezzo di apertura è stato di 191.45, e il supporto più vicino si trova a 189.25, quindi consiglio di posizionare lo stop loss a quel livello. Il take profit può essere posizionato a 192.93, che è vicino al massimo recente. Inoltre, considerando l'andamento dei volumi e il VWAP, sembra probabile che il prezzo possa continuare a salire.
+
+Order for AAPL -- Time: 25/11/2023, 22:00:07
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Dovresti aprire una posizione long su AAPL in quanto il prezzo sta mostrando un trend al rialzo. Metti lo stop loss a 189.25 per proteggere la tua posizione in caso di ribasso improvviso. Il take profit potrebbe essere posizionato a 192.93 poiché potrebbe essere raggiunto se il trend positivo continua.
+
+Order for AAPL -- Time: 25/11/2023, 22:01:17
+type: long
+stop_loss: 188.85
+take_profit: 193.5
+explaination: Sulla base dell'analisi tecnica, l'AAPL mostra un trend rialzista confermato dai prezzi in aumento e dal volume crescente. Inoltre, l'analisi fondamentale indica che l'azienda ha una solida base finanziaria e un buon outlook per il futuro. Pertanto, consiglio di aprire una posizione long con un'apertura a 191.31, un take profit a 193.50 e uno stop loss a 188.85.
+
+Order for AAPL -- Time: 25/11/2023, 22:01:54
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Dai dati di mercato, possiamo notare che il prezzo di AAPL ha recentemente superato la resistenza a 191.45 e si è consolidato intorno a quel livello. Ciò potrebbe indicare un potenziale movimento al rialzo. Inoltre, l'indicatore di trading ad alta frequenza VWAP mostra un'ulteriore conferma della forza del trend rialzista. Pertanto, consigliamo di aprire una posizione long con uno stop loss a 189.25 e un take profit a 192.93, in linea con il prossimo livello di resistenza significativa.
+
+Order for AAPL -- Time: 25/11/2023, 22:03:33
+type: long
+stop_loss: 188.5
+take_profit: 194.0
+explaination: Dall'analisi tecnica, il prezzo di AAPL ha formato una tendenza rialzista, con un continuo aumento dei massimi e minimi. L'indicatore di media mobile esponenziale mostra un'ulteriore conferma di questa tendenza, con il prezzo al di sopra della media mobile a 50 periodi. Inoltre, l'indicatore RSI mostra un livello di ipercomprato, suggerendo una forza di acquisto nel mercato. Dal punto di vista fondamentale, la società ha riportato risultati solidi e si prevede un aumento delle vendite durante la stagione natalizia. Pertanto, si consiglia di aprire una posizione long su AAPL con uno stop loss a 188.50 e un take profit a 194.00.
+
+Order for AAPL -- Time: 25/11/2023, 22:05:08
+type: long
+stop_loss: 188.9
+take_profit: 193.0
+explaination: Dopo aver analizzato i dati di mercato per AAPL, ho notato che il prezzo ha formato un pattern di inversione rialzista, indicando un potenziale movimento verso l'alto. Inoltre, il volume di trading è aumentato, confermando il momentum rialzista. Pertanto, consiglio di aprire una posizione long con uno stop loss a 188.90 e un take profit a 193.00. L'apertura dell'operazione sarebbe intorno al prezzo attuale di 191.31.
+
+Order for AAPL -- Time: 25/11/2023, 22:05:18
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Dalla analisi tecnica, possiamo osservare che il prezzo di AAPL ha recentemente superato la resistenza a 191.45, raggiungendo un massimo di 192.93. Ciò potrebbe indicare un'ulteriore momentum rialzista. Inoltre, il volume è rimasto costante o in aumento, indicando un buon supporto per il movimento rialzista. Pertanto, potremmo considerare un'apertura di posizione long, con uno stop loss a 189.25 e un take profit a 192.93.
+
+Order for AAPL -- Time: 25/11/2023, 22:08:24
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Dopo aver analizzato i dati di mercato, ho considerato l'andamento dei prezzi e il volume delle transazioni. Il prezzo di apertura è superiore al prezzo di chiusura precedente, indicando un potenziale trend rialzista. Inoltre, il volume delle transazioni è aumentato, confermando il movimento rialzista. Ho posizionato il take profit appena al di sopra del massimo recente a 192.93, mentre ho collocato lo stop loss leggermente al di sotto del minimo recente a 189.25.
+
+Order for AAPL -- Time: 25/11/2023, 22:09:18
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Dopo aver analizzato i dati di mercato, è evidente che il prezzo di AAPL sta mostrando un trend rialzista. Il prezzo ha superato la resistenza a 191.31 e potrebbe continuare a salire fino a 192.93. Pertanto, consiglio di aprire una posizione long. Il livello di stop loss può essere posto a 189.25 per proteggere da eventuali ribassi improvvisi.
+
+Order for AAPL -- Time: 25/11/2023, 22:10:00
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Dopo aver analizzato i dati di mercato, noto che il prezzo di AAPL ha mostrato un trend rialzista costante. Inoltre, il prezzo ha superato la resistenza a 191.45 e potrebbe continuare a salire verso il livello di resistenza successivo a 192.93. Pertanto, consiglio di aprire una posizione long con uno stop loss a 189.25 e un take profit a 192.93.
+
+Order for AAPL -- Time: 25/11/2023, 22:10:41
+type: short
+stop_loss: 192.5
+take_profit: 188.5
+explaination: Dai dati di mercato, si osserva che il prezzo di AAPL ha mostrato una tendenza al ribasso con un downtrend evidente. Inoltre, l'analisi tecnica con indicatori come il moving average e l'RSI confermano un'ulteriore potenziale per una posizione short. Pertanto, si consiglia di aprire una posizione short al prezzo di apertura di 190.64, con uno stop loss a 192.50 e un take profit a 188.50.
+
+Order for AAPL -- Time: 25/11/2023, 22:11:08
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Dai dati di mercato, possiamo notare che il prezzo di AAPL ha formato una tendenza rialzista, con i prezzi che hanno mostrato un aumento costante. Utilizzando l'analisi tecnica, abbiamo notato che il prezzo ha superato la resistenza chiave a 191.45, confermando la forza del trend rialzista. Il volume di scambio e il numero di trade sono anche in aumento, confermando il momentum positivo. Inoltre, le candele da 1H mostrano una serie di higher highs e higher lows. Tutti questi fattori suggeriscono un'apertura di posizione long. Il livello di stop loss può essere posizionato a 189.25, appena al di sotto del recente low, mentre il take profit può essere posizionato a 192.93, in prossimità del recente high.
