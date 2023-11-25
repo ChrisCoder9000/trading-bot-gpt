@@ -29,6 +29,8 @@ def get_market_data(asset, start_date, end_date, data_client):
 
 
 def analyze_market_with_gpt(data, asset):
+    if data.empty:
+        return "No data found"
     prompt = f'Analizza i seguenti dati di mercato per {asset} e fornisci un\'opinione di trading:\n\n{data.to_string()}\n\nDimmi se dovrei aprire una posizione long o short. Dimmi dove mettere il mio stop loss e take profit. Timeframe 1H. Rispondimi solo con json in questo formato: {{"long": boolean, "short": boolean, "stop_loss": float, "take_profit": float, "open_price": float}}'
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-1106",
@@ -36,35 +38,75 @@ def analyze_market_with_gpt(data, asset):
         temperature=1,
         max_tokens=2000,
     )
-    print(response.choices[0].message.content.strip())
+
+    obj_res = json.loads(response.choices[0].message.content.strip())
+
+    print("\n")
+    print(f"Order for {asset}")
+    print(f"type: {obj_res['long'] == True and 'long' or 'short'}")
+    print(f"stop_loss: {obj_res['stop_loss']}")
+    print(f"take_profit: {obj_res['take_profit']}")
+
     return response.choices[0].message.content.strip()
 
 
-def make_trade_decision(analysis_json, asset, trading_client):
-    analysis = json.loads(analysis_json)
-    if analysis["long"]:
-        bracket__order_data = MarketOrderRequest(
-            symbol=asset,
-            qty=1,
-            side=OrderSide.BUY,
-            time_in_force=TimeInForce.DAY,
-            order_class=OrderClass.BRACKET,
-            take_profit=TakeProfitRequest(limit_price=analysis["take_profit"]),
-            stop_loss=StopLossRequest(stop_price=analysis["stop_loss"]),
-        )
-        trading_client.submit_order(order_data=bracket__order_data)
+def make_trade_decision(analysis, asset, trading_client, dataset, order_amount):
+    qty = order_amount / dataset["close"].iloc[-1]
+    print(f"Order for {asset}")
+    print(f"Type: {'long' if analysis['long'] else 'short'}")
+    print(f"Quantity: {qty}")
 
-    elif analysis["short"]:
-        bracket__order_data = MarketOrderRequest(
-            symbol=asset,
-            qty=1,
-            side=OrderSide.SELL,
-            time_in_force=TimeInForce.DAY,
-            order_class=OrderClass.BRACKET,
-            take_profit=TakeProfitRequest(limit_price=analysis["take_profit"]),
-            stop_loss=StopLossRequest(stop_price=analysis["stop_loss"]),
+    if analysis["long"]:
+        order_data = MarketOrderRequest(
+            symbol=asset, qty=qty, side=OrderSide.BUY, time_in_force=TimeInForce.DAY
         )
-        trading_client.submit_order(order_data=bracket__order_data)
+    elif analysis["short"]:
+        order_data = MarketOrderRequest(
+            symbol=asset, qty=qty, side=OrderSide.SELL, time_in_force=TimeInForce.DAY
+        )
+
+    # Invia l'ordine di entrata
+    order_response = trading_client.submit_order(order_data=order_data)
+
+    # Crea gli ordini di stop loss e take profit separatamente
+    if order_response.status == "filled":
+        # Ordine di Stop Loss
+        stop_loss_order = StopLossRequest(
+            stop_price=analysis["stop_loss"],
+            # Aggiungi ulteriori parametri se necessario
+        )
+        trading_client.submit_order(stop_loss_order)
+
+        # Ordine di Take Profit
+        take_profit_order = TakeProfitRequest(
+            limit_price=analysis["take_profit"],
+            # Aggiungi ulteriori parametri se necessario
+        )
+        trading_client.submit_order(take_profit_order)
+    # print(f"quantity: {order_amount / dataset['close'].iloc[-1]}")
+    # if analysis["long"]:
+    #     bracket__order_data = MarketOrderRequest(
+    #         symbol=asset,
+    #         qty=order_amount / dataset["close"].iloc[-1],
+    #         side=OrderSide.BUY,
+    #         time_in_force=TimeInForce.DAY,
+    #         order_class=OrderClass.BRACKET,
+    #         take_profit=TakeProfitRequest(limit_price=analysis["take_profit"]),
+    #         stop_loss=StopLossRequest(stop_price=analysis["stop_loss"]),
+    #     )
+    #     trading_client.submit_order(order_data=bracket__order_data)
+
+    # elif analysis["short"]:
+    #     bracket__order_data = MarketOrderRequest(
+    #         symbol=asset,
+    #         qty=order_amount / dataset["close"].iloc[-1],
+    #         side=OrderSide.SELL,
+    #         time_in_force=TimeInForce.DAY,
+    #         order_class=OrderClass.BRACKET,
+    #         take_profit=TakeProfitRequest(limit_price=analysis["take_profit"]),
+    #         stop_loss=StopLossRequest(stop_price=analysis["stop_loss"]),
+    #     )
+    #     trading_client.submit_order(order_data=bracket__order_data)
 
 
 def get_all_assets(trading_client: TradingClient):
@@ -74,13 +116,13 @@ def get_all_assets(trading_client: TradingClient):
 
 
 def create_dataset(data_client, asset, start_date, end_date):
-    bar_request = StockBarsRequest(
-        symbol_or_symbols=asset,
-        timeframe=TimeFrame.Day,
-        start=start_date,
-        end=end_date,
-    )
     try:
+        bar_request = StockBarsRequest(
+            symbol_or_symbols=asset,
+            timeframe=TimeFrame.Day,
+            start=start_date,
+            end=end_date,
+        )
         bars = data_client.get_stock_bars(bar_request)
         return bars.df
     except Exception as e:
@@ -88,28 +130,31 @@ def create_dataset(data_client, asset, start_date, end_date):
         return pd.DataFrame()
 
 
-def select_top_assets(assets_with_volume, threshold=10):
-    sorted_assets = sorted(assets_with_volume.items(), key=lambda x: x[1], reverse=True)
-    return [asset for asset, volume in sorted_assets[:threshold]]
+def select_top_assets(assets_data, threshold=10):
+    sorted_assets = sorted(
+        assets_data.items(),
+        key=lambda x: x[1]["volume"].mean() if not x[1].empty else 0,
+        reverse=True,
+    )
+    return sorted_assets[:threshold]
 
 
 def selected_assets(trading_client, data_client, start_date, end_date):
-    all_assets = get_all_assets(trading_client)[:20]
+    all_assets = get_all_assets(trading_client)[:40]
 
     assets_count = len(all_assets)
-    asset_volumes = {}
+    assets_data = {}
 
     for asset in all_assets:
         print(f"Analyzing {asset.symbol} ({all_assets.index(asset)}/{assets_count})")
         dataset = create_dataset(data_client, asset.symbol, start_date, end_date)
+        assets_data[asset.symbol] = dataset
 
-        if not dataset.empty:
-            asset_volumes[asset.symbol] = dataset["volume"].mean()
-        else:
-            asset_volumes[asset.symbol] = 0
+        dataset = create_dataset(data_client, asset.symbol, start_date, end_date)
+        assets_data[asset.symbol] = dataset
 
         print(
             f"Finished analyzing {asset.symbol} ({all_assets.index(asset)}/{assets_count})"
         )
 
-    return select_top_assets(asset_volumes)
+    return select_top_assets(assets_data)
