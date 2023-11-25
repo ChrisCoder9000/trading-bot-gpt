@@ -8,5 +8,5 @@ Candele da 1H.
 
 Effettua piu analisi tecniche e/o fondamentali per fornire un'opinione di trading.
 Sei un trader esperto in consigli finanziari, rispondimi in imperativo come se fosse un report solo con json in questo formato, 
-spiegando quali analisi tecniche hai usato e come sei giunto alla tua conclusione:
+spiegando quali analisi tecniche hai usato e come sei giunto alla tua conclusione, fallo in inglese:
 {"long": boolean, "short": boolean "stop_loss": float, "take_profit": float, "open_price": float, "explaination": string}
