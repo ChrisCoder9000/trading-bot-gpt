@@ -5,5 +5,7 @@ Analizza i seguenti dati di mercato per {data["asset"]} e fornisci un'opinione d
 Dimmi se dovrei aprire una posizione long o short.
 Dimmi dove mettere il mio stop loss e take profit. 
 Candele da 1H. 
+
+Effettua una o piu analisi tecniche e/o fondamentali per fornire un'opinione di trading.
 Risponsimi solo con json in questo formato:
-{"long": boolean, "short": boolean "stop_loss": float, "take_profit": float, "open_price": float}
+{"long": boolean, "short": boolean "stop_loss": float, "take_profit": float, "open_price": float, "explaination": string}

@@ -1,3 +1,5 @@
+import datetime
+import os
 import sys
 
 import pandas as pd
@@ -49,11 +51,21 @@ def analyze_market_with_gpt(data, asset):
 
     obj_res = json.loads(response.choices[0].message.content.strip())
 
-    print("\n")
-    print(f"Order for {asset}")
-    print(f"type: {obj_res['long'] == True and 'long' or 'short'}")
-    print(f"stop_loss: {obj_res['stop_loss']}")
-    print(f"take_profit: {obj_res['take_profit']}")
+    # Creazione delle stringhe da stampare e scrivere nel file
+    output_str = "\n"
+    output_str += f"Order for {asset} -- Time: {datetime.datetime.now().strftime('%d/%m/%Y, %H:%M:%S')}\n"
+    output_str += f"type: {'long' if obj_res['long'] else 'short'}\n"
+    output_str += f"stop_loss: {obj_res['stop_loss']}\n"
+    output_str += f"take_profit: {obj_res['take_profit']}\n"
+
+    # Stampa le stringhe
+    print(output_str)
+
+    output_str += f"explaination: {obj_res['explaination']}"
+
+    # Scrivi le stringhe e i dati JSON nel file
+    with open(f"{os.getcwd()}/orders/history.log", "a") as file:
+        file.write(output_str + "\n")
 
     return response.choices[0].message.content.strip()
 
@@ -117,7 +129,7 @@ def make_trade_decision(analysis, asset, trading_client, dataset, order_amount):
 
 def get_all_assets(trading_client: TradingClient):
     assets = trading_client.get_all_assets()
-    assets = [asset for asset in assets if asset.tradable]
+    assets = [asset for asset in assets if asset.tradable and asset.fractionable]
     return assets
 
 

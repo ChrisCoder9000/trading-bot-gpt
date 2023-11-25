@@ -1,0 +1,48 @@
+
+Order for LABU -- Time: 25/11/2023, 20:51:09
+type: short
+stop_loss: 3.59
+take_profit: 3.37
+explaination: I dati di mercato mostrano un trend al ribasso per LABU, con un calo costante dei prezzi di chiusura nei giorni precedenti. La media delle candele da 1H indica un'ulteriore probabile discesa dei prezzi. Pertanto, si consiglia di aprire una posizione short con uno stop loss a 3.59 e un take profit a 3.37.
+
+Order for FCX -- Time: 25/11/2023, 20:51:12
+type: short
+stop_loss: 37.25
+take_profit: 36.5
+explaination: I dati di mercato indicano una tendenza al ribasso, con il prezzo che si è mantenuto al di sotto della media mobile. Inoltre, il volume di scambio è diminuito nelle ultime sessioni. Si consiglia di aprire una posizione short con uno stop loss a 37.25 e un take profit a 36.50.
+
+Order for HYMB -- Time: 25/11/2023, 20:51:18
+type: long
+stop_loss: 24.18
+take_profit: 24.55
+explaination: Sulla base dei dati di mercato, la tendenza al rialzo di HYMB sembra in atto. Il prezzo di apertura è superiore al prezzo di chiusura dei giorni precedenti, il che indica un potenziale forte momentum al rialzo. Inoltre, il volume delle negoziazioni è in costante aumento, il che conferma il trend. Si consiglia di aprire una posizione long con uno stop loss a 24.18 e un take profit a 24.55.
+
+Order for JAAA -- Time: 25/11/2023, 20:51:22
+type: long
+stop_loss: 49.9
+take_profit: 51.2
+explaination: Dai dati di mercato, JAAA sembra essere in un'ottima posizione per aprire una posizione long. Il prezzo di apertura è superiore ai prezzi di chiusura dei giorni precedenti e il volume degli scambi è in aumento, indicando un interesse crescente degli investitori. Si consiglia di mettere lo stop loss a 49.90 per limitare le perdite in caso di inversione del trend, e di impostare il take profit a 51.20 per trarre profitto dall'eventuale continuazione del trend rialzista.
+
+Order for CM -- Time: 25/11/2023, 20:51:24
+type: long
+stop_loss: 38.7
+take_profit: 39.74
+explaination: Dal punto di vista tecnico, il prezzo ha formato un pattern di bullish engulfing, indicando un'inversione al rialzo. Il volume è aumentato durante l'ultimo periodo, confermando la forza del movimento rialzista. Si consiglia di aprire una posizione long con uno stop loss a 38.70 e un take profit a 39.74.
+
+Order for KIE -- Time: 25/11/2023, 20:51:28
+type: long
+stop_loss: 44.4
+take_profit: 45.5
+explaination: L'analisi tecnica mostra un pattern di continuazione al rialzo con un incremento costante nel prezzo di chiusura. Il volume di scambio è aumentato costantemente, il che indica un forte interesse degli investitori. Si consiglia di aprire una posizione long con uno stop loss a 44.40 e un take profit a 45.50.
+
+Order for CMA -- Time: 25/11/2023, 20:51:31
+type: short
+stop_loss: 45.2
+take_profit: 43.4
+explaination: Basato sull'analisi tecnica, il prezzo di CMA ha mostrato una tendenza al ribasso con una serie di candele rosse che indicano una probabile continuazione del trend negativo. Inoltre, il volume di trading è aumentato, confermando il potenziale movimento al ribasso. Pertanto, si consiglia di aprire una posizione short con uno stop loss a 45.20 e un take profit a 43.40.
+
+Order for LSXMK -- Time: 25/11/2023, 20:51:33
+type: long
+stop_loss: 26.1
+take_profit: 27.0
+explaination: I dati di mercato mostrano un trend rialzista con chiusura al di sopra del VWAP e volumi significativi. L'apertura di una posizione long potrebbe essere conveniente con uno stop loss a 26.10 e un take profit a 27.00.

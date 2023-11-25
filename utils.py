@@ -19,5 +19,4 @@ def replacement_function(data, path):
     compact_prompt = " ".join(prompt.split())
     compact_prompt = pattern.sub(replacement_function, compact_prompt)
 
-    print(f"-----> {compact_prompt}")
     return compact_prompt
