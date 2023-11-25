@@ -1,0 +1,9 @@
+Analizza i seguenti dati di mercato per {data["asset"]} e fornisci un'opinione di trading: 
+
+{data["rows"]}
+
+Dimmi se dovrei aprire una posizione long o short.
+Dimmi dove mettere il mio stop loss e take profit. 
+Timeframe 1H. 
+Risponsimi solo con json in questo formato:
+{"long": boolean, "short": boolean "stop_loss": float, "take_profit": float, "open_price": float}
