@@ -2,8 +2,8 @@ import os
 import re
 
 
-def create_profile_prompt(data):
-    with open(f"{os.getcwd()}/prompt_analisi_ordine.txt", "r") as file:
+def replacement_function(data, path):
+    with open(f"{os.getcwd()}/{path}", "r") as file:
         prompt = file.read()
 
     def replacement_function(match):

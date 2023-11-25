@@ -2,6 +2,8 @@ import sys
 
 import pandas as pd
 
+from utils import replacement_function
+
 sys.path.append("/Users/christiannonis/Documents/Projects/trading-bot-gpt")
 
 import json
@@ -31,7 +33,13 @@ def get_market_data(asset, start_date, end_date, data_client):
 def analyze_market_with_gpt(data, asset):
     if data.empty:
         return "No data found"
-    prompt = f'Analizza i seguenti dati di mercato per {asset} e fornisci un\'opinione di trading:\n\n{data.to_string()}\n\nDimmi se dovrei aprire una posizione long o short. Dimmi dove mettere il mio stop loss e take profit. Timeframe 1H. Rispondimi solo con json in questo formato: {{"long": boolean, "short": boolean, "stop_loss": float, "take_profit": float, "open_price": float}}'
+
+    prompt_data = {
+        "asset": asset,
+        "rows": data.to_string(),
+    }
+
+    prompt = replacement_function(prompt_data, "prompt_analisi_ordine.txt")
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-1106",
         messages=[{"role": "user", "content": prompt}],
@@ -52,8 +60,6 @@ def analyze_market_with_gpt(data, asset):
 
 def make_trade_decision(analysis, asset, trading_client, dataset, order_amount):
     qty = order_amount / dataset["close"].iloc[-1]
-    print(f"Order for {asset}")
-    print(f"Type: {'long' if analysis['long'] else 'short'}")
     print(f"Quantity: {qty}")
 
     if analysis["long"]:
