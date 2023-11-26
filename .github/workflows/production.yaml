@@ -2,7 +2,7 @@ name: Buttiamo su tutto!
 
 on:
   push:
-    branches: ["develop"]
+    branches: ["main"]
 
 jobs:
   build:
