@@ -1,5 +1,5 @@
 alpaca-py==0.13.3
-Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1696349106907/work
 Flask-Migrate==4.0.5
+Flask
 Flask-SQLAlchemy==3.1.1
-requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1684774241324/work
+requests
