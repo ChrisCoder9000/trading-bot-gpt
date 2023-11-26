@@ -280,3 +280,9 @@ type: long
 stop_loss: 189.25
 take_profit: 192.93
 explaination: Based on the technical analysis of the 1-hour candlestick chart for AAPL, there is a bullish trend indicated by the higher highs and higher lows. The price has also moved above the VWAP, indicating potential upward momentum. Additionally, the volume has been increasing, suggesting strong buying interest. Therefore, a long position is recommended with a stop loss at the recent low of 189.25 and a take profit at the recent high of 192.93.
+
+Order for AAPL -- Time: 26/11/2023, 14:46:05
+type: long
+stop_loss: 188.5
+take_profit: 194.5
+explaination: Based on the technical analysis, the VWAP is showing an upward trend, indicating a bullish sentiment. The price is also trading above the 50-day moving average, confirming the bullish bias. Additionally, there is a support level at around 189.50, which could act as a stop-loss level. Therefore, a long position is recommended with a stop-loss at 188.50 and a take-profit at 194.50.

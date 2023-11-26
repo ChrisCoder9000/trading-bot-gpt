@@ -50,7 +50,7 @@ class User(db.Model):
 
 
 # Endpoint per ottenere e aggiungere elementi
-@app.route("/analize", methods=["GET"])
+@app.route("/api/analize", methods=["GET"])
 def get_items():
     asset = request.args.get("asset")
 
@@ -78,9 +78,9 @@ def get_items():
     )
 
 
-def get_items():
-    items = Item.query.all()
-    return jsonify([item.to_dict() for item in items])
+# def get_items():
+#     items = Item.query.all()
+#     return jsonify([item.to_dict() for item in items])
 
 
 @app.route("/items", methods=["POST"])

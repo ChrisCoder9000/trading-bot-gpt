@@ -68,3 +68,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             pm2 restart alphastocks_frontend
+            sudo supervisorctl restart alphastocks_backend
