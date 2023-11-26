@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 
 from orders.functions import analyze_market_with_gpt, create_dataset
 from orders.orders import data_client, start_date, end_date
-from backend.orders.functions import analyze_market_with_gpt, create_dataset
+from orders.functions import analyze_market_with_gpt, create_dataset
 
 api = Blueprint("api", __name__)
 
