@@ -1,95 +1,83 @@
+"use client";
+
+import { useLazyGetAnalisisQuery } from "@/services/api";
+import { StyledHome } from "./styles";
+import { useState } from "react";
+import worldImage from "@/assets/world-links-2.jpg";
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  const [searchTerm, setSearchTerm] = useState("");
+  const [trigger, { data, isLoading, isError, error }] =
+    useLazyGetAnalisisQuery();
 
-      <div className={styles.center}>
+  const handleSearchAsset = () => {
+    trigger({
+      asset: searchTerm,
+      lang: "en",
+    });
+  };
+
+  return (
+    <StyledHome>
+      <div className="hero-section">
+        <h1>The easiest way to help take trade decisions</h1>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          priority={true}
+          className="world-image"
+          src={worldImage}
+          alt=""
         />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="search-asset-container">
+        <div className="cta-section">
+          <h2 className="cta-title">Give it a try!</h2>
+          <p className="cta-subtitle">Search by Ticker your favorite asset</p>
+          <div className="input-container">
+            <input
+              placeholder="TSLA, AAPL, MSFT..."
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button onClick={handleSearchAsset}>Search</button>
+          </div>
+        </div>
+        {data ? (
+          <div className="search-result-table">
+            <h3 className="analysis-title">Analysis Result</h3>
+            <p className="description">{data.result.explaination}</p>
+            <div className="wrapper-cells">
+              <div className="wrapper-prices">
+                <div>
+                  <h3>Open price </h3>
+                  <p>{data.result.open_price}</p>
+                </div>
+                <div>
+                  <h3>Stop loss </h3>
+                  <p>{data.result.stop_loss}</p>
+                </div>
+                <div>
+                  <h3>Take profit </h3>
+                  <p>{data.result.take_profit}</p>
+                </div>
+              </div>
+              <div className="wrapper-details">
+                <div>
+                  <h3>Candles</h3>
+                  <p>{data.timeframe.candles}</p>
+                </div>
+                <div>
+                  <h3>Start Date</h3>
+                  <p>{new Date(data.timeframe.start_date).toLocaleString()}</p>
+                </div>
+                <div>
+                  <h3>End Date</h3>
+                  <p>{new Date(data.timeframe.end_date).toLocaleString()}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
-    </main>
+    </StyledHome>
   );
 }

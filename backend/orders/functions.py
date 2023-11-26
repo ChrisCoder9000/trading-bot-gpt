@@ -7,7 +7,7 @@ import os
 
 import pandas as pd
 
-from utils import replacement_function
+from utils.misc import replacement_function
 
 import json
 import openai

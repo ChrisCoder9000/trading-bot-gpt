@@ -4,3 +4,4 @@ Flask
 Flask-SQLAlchemy==3.1.1
 requests
 openai==0.28
+flask-cors

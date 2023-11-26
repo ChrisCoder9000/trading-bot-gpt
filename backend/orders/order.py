@@ -15,6 +15,7 @@ from orders.functions import (
     selected_assets,
     create_dataset,
 )
+from orders.orders import data_client, start_date, end_date
 
 for asset, data in selected_assets(trading_client, data_client, start_date, end_date):
     try:

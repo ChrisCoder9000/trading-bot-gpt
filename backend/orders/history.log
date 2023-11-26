@@ -286,3 +286,81 @@ type: long
 stop_loss: 188.5
 take_profit: 194.5
 explaination: Based on the technical analysis, the VWAP is showing an upward trend, indicating a bullish sentiment. The price is also trading above the 50-day moving average, confirming the bullish bias. Additionally, there is a support level at around 189.50, which could act as a stop-loss level. Therefore, a long position is recommended with a stop-loss at 188.50 and a take-profit at 194.50.
+
+Order for AAPL -- Time: 26/11/2023, 15:37:27
+type: short
+stop_loss: 192.5
+take_profit: 188.5
+explaination: Based on the analysis of the market data for AAPL, it is recommended to open a short position. The decision is based on the bearish trend indicated by the lower highs and lower lows in the recent candlestick patterns. The RSI indicator also shows the stock to be overbought, further supporting the short position. The stop loss should be set at 192.5 and the take profit at 188.5 to manage risk and potential gains.
+
+Order for AAPL -- Time: 26/11/2023, 15:37:31
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Based on the technical analysis of the 1H candlestick chart, the stock has shown a bullish trend with higher highs and higher lows. The VWAP has been consistently increasing, indicating strong buying momentum. Additionally, the trade count has been high, indicating increased market participation. Fundamentally, the company has a strong financial position and positive news about new product launches. Therefore, opening a long position with a stop loss at the recent low of 189.25 and a take profit at the recent high of 192.93 is recommended.
+
+Order for AAPL -- Time: 26/11/2023, 15:38:11
+type: short
+stop_loss: 192.31
+take_profit: 189.31
+explaination: Based on the analysis of the 1H candlesticks, the stock price of AAPL has been showing a downward trend with lower highs and lower lows. This indicates a bearish sentiment in the market. Additionally, the volume has been decreasing, suggesting a lack of strong buying interest. The RSI indicator also shows the stock is approaching overbought levels. These technical indicators suggest that the stock is likely to continue its downward movement, hence a short position is recommended. The stop loss can be placed at the recent high of 192.31, and the take profit at the recent low of 189.31.
+
+Order for AAPL -- Time: 26/11/2023, 22:03:33
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Based on the technical analysis, the stock price of AAPL is showing bullish signals. The VWAP is increasing and the stock is trading above the moving averages, indicating a potential uptrend. Additionally, the volume is also increasing, suggesting strong buying interest. Fundamentally, the company's strong financial performance and positive market sentiment further support a long position. A stop loss can be placed at the recent low of 189.25 to limit potential losses, while a take profit target can be set at the recent high of 192.93.
+
+Order for AAPL -- Time: 26/11/2023, 22:04:25
+type: short
+stop_loss: 192.95
+take_profit: 189.5
+explaination: Based on the technical analysis, the stock has shown a bearish trend with the closing price consistently moving lower. The RSI indicator is also showing an overbought condition, indicating a potential reversal. The MACD indicator has also shown a bearish crossover. Therefore, it's advisable to open a short position with a stop loss at the high of the recent high at 192.95 and a take profit target at the recent low of 189.50.
+
+Order for AAPL -- Time: 26/11/2023, 22:05:35
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Based on the technical analysis, the stock has formed a bullish trend with higher highs and higher lows. The RSI indicator shows the stock is not overbought. The moving averages also suggest a bullish trend. The recent price action indicates a potential upward movement, therefore, a long position is recommended. The stop loss can be placed at the recent low of 189.25, while the take profit level can be set at the recent high of 192.93.
+
+Order for AAPL -- Time: 26/11/2023, 22:06:56
+type: long
+stop_loss: 189.25
+take_profit: 192.93
+explaination: Based on technical analysis, the stock's price has been consistently increasing, with the VWAP also showing an upward trend. Additionally, the trade count and volume are also increasing, indicating strong buying interest. Therefore, it is recommended to open a long position at the current price of 191.31 with a stop loss at 189.25 and a take profit at 192.93.
+
+Order for TSLA -- Time: 26/11/2023, 22:13:49
+type: long
+stop_loss: 231.4
+take_profit: 244.01
+explaination: Based on technical analysis, the stock's price has broken through the resistance level, indicating a potential bullish trend. The RSI indicator is also showing a bullish divergence. Additionally, the stock's volume has been increasing, supporting the upward momentum. Considering these factors, it is recommended to open a long position with a stop loss at the recent low of 231.40 and a take profit at the next resistance level of 244.01.
+
+Order for TSLA -- Time: 26/11/2023, 22:15:23
+type: long
+stop_loss: 231.4
+take_profit: 244.01
+explaination: Based on the technical analysis, the stock TSLA is showing an upward trend with higher highs and higher lows. The VWAP is also trending upwards, indicating strong buying pressure. Additionally, the volume has been increasing, confirming the bullish sentiment. Therefore, it is recommended to open a long position with a stop loss at the recent low of 231.40 and a take profit at the recent high of 244.01.
+
+Order for TSLA -- Time: 26/11/2023, 22:15:36
+type: long
+stop_loss: 230.0
+take_profit: 245.0
+explaination: Based on technical analysis, the stock has shown a bullish trend with the price consistently closing above the VWAP. Additionally, the high volume and trade count indicate strong investor interest. The RSI is also showing the stock to be in the overbought territory, indicating potential for further upward movement. Therefore, a long position is recommended with a stop loss at 230.00 and a take profit at 245.00.
+
+Order for TSLA -- Time: 26/11/2023, 23:11:10
+type: long
+stop_loss: 231.4
+take_profit: 244.01
+explaination: Based on the technical analysis, TSLA shows a bullish trend with the price consistently reaching higher highs. The VWAP has also been trending upwards, indicating strong buying pressure. Additionally, the trade count is increasing, suggesting growing interest in the stock. The open and close prices have been consistently higher, further supporting the long position. Considering these factors, opening a long position with a stop loss at 231.40 and a take profit at 244.01 is recommended.
+
+Order for TSLA -- Time: 26/11/2023, 23:30:50
+type: long
+stop_loss: 231.4
+take_profit: 244.01
+explaination: Based on the technical analysis, the stock TSLA is showing bullish momentum. The price has recently broken above the previous high, indicating a potential uptrend. The RSI indicator is also showing the stock is in the overbought territory, which could signal further upward movement. The volume and trade count are also increasing, supporting the bullish thesis. Therefore, opening a long position with a stop loss at the recent low of 231.40 and a take profit at the recent high of 244.01 could be a viable trading strategy.
+
+Order for TSLA -- Time: 26/11/2023, 23:33:56
+type: long
+stop_loss: 230
+take_profit: 245
+explaination: Based on the technical analysis, the stock TSLA shows a bullish trend with the price consistently closing above the VWAP. The RSI indicator is also indicating a strong buying momentum. Additionally, the stock has broken through a key resistance level, suggesting further upside potential. Considering these factors, opening a long position with a stop loss at $230 and a take profit at $245 is advisable.
