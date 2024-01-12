@@ -7,7 +7,12 @@ sys.path.append("/Users/christiannonis/Documents/Projects/trading-bot-gpt")
 import openai
 from datetime import datetime, timedelta
 from alpaca.data.historical import StockHistoricalDataClient
-from main import openai_key, alpaca_secret_paper, alpaca_api_key_paper, trading_client
+from main import (
+    openai_key,
+    alpaca_secret_paper,
+    alpaca_api_key_paper,
+    trading_client,
+)
 from orders.functions import (
     analyze_market_with_gpt,
     get_market_data,

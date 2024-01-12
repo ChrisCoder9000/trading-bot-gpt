@@ -1,6 +1,6 @@
 from alpaca.trading.client import TradingClient
 
-from app_secrets import (
+from backend.app_secrets import (
     alpaca_api_key_paper,
     alpaca_secret_paper,
     openai_key,
